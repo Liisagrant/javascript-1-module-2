@@ -54,3 +54,53 @@ const nestedObjects = {
     },
 };
 
+const article = document.querySelector("article");
+
+let stuffList = document.createElement("ul");
+
+/*/for (let i = 0; i < stuff.length; i++ ) {
+    let listItem = document.createElement("li");
+    listItem.innerHTML = stuff[i];
+    stuffList.append(listItem);
+
+}
+
+// Items of array eller for of min all time fav:
+*/
+for (const item of stuff){
+    let listItem = document.createElement("li");
+    listItem.innerHTML = item;
+    stuffList.append(listItem);
+}
+
+//forEach:
+
+/*stuff.forEach(function (item){
+    let listItem = document.createElement("li");
+    listItem.innerHTML = item;
+    stuffList.append(listItem);
+});*/
+
+/*stuff.forEach((item) => {
+    let listItem = document.createElement("li");
+    listItem.innerHTML = item;
+    stuffList.append(listItem);
+});*/
+
+stuff.forEach(function (item){
+    let listItem = document.createElement("li");
+    listItem.innerHTML = item;
+    stuffList.append(listItem);
+});
+
+article.append(stuffList);
+
+
+for (let singelObject in nestedObjects){
+    let listItem = document.createElement("li");
+    listItem.innerHTML = `Name:  ${nestedObjects[singelObject].name}`;
+    stuffList.append(listItem);
+}
+article.append(stuffList);
+
+
