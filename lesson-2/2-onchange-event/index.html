@@ -6,9 +6,52 @@
     <title>Loops Dig Deeper</title>
     <script src="js/script.js" defer></script>
 </head>
+<style>
+    .circles {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .circle {
+        background: blue;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(89, 10, 163);
+        font-size: 20px;
+        font-weight: bold;
+        font-family: monospace;
+        margin: 10px 15px;
+    }
+    select {
+        height: 40px;
+        border-radius: 5px;
+        text-transform: capitalize;
+        padding: 0 15px;
+        border: 2px solid #ccc;
+    }
+</style>
 <body>
 <main>
-    <article></article>
+    <div class="container">
+        <label>
+            <select>
+                <option value="">select an option</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <ul class="circles">
+            <li class="circle">.</li>
+        </ul>
+    </div>
 </main>
 </body>
 </html>
